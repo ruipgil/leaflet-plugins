@@ -3,6 +3,7 @@
  */
 
 /* global google: true */
+(function (w) {
 
 L.Google = L.Class.extend({
 	includes: L.Mixin.Events,
@@ -200,3 +201,7 @@ L.Google.asyncInitialize = function() {
 	}
 	L.Google.asyncWait = [];
 };
+
+w.Google = L.Google
+
+})((typeof module !== 'undefined' ? module.exports : false) || this)
